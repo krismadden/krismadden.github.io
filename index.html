@@ -1,3 +1,4 @@
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 
 <style type="text/css">body{ margin: 0;}</style>
@@ -10,8 +11,8 @@
 
 
 
-var coloRs = ['#DD1D60', '#3152e5', '#313131',  "#000000", "#45e305"];
-var Background = '#ffffff';
+var coloRs = ["#6d9dc2"];
+var Background = '#1e2252';
 
 var screenWidth = 20; //in units. the actual width is screenWidth * spacing
 var screenHeight = 14;
@@ -35,7 +36,6 @@ var timeR2 = 0;
 var timeRange2 = 2;
 
 var saving = false;
-
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -71,6 +71,8 @@ function draw() {
     timeR = 0;
   }
   tRiangles()
+
+  texT();
 }
 
 function tRiangles(){
@@ -115,6 +117,14 @@ function keyPressed() {
       }
     }
   }
+}
+
+function texT(){
+  fill(255);
+  textSize(75);
+  textAlign(CENTER, CENTER);
+  text('Martian Design Lab', windowWidth/2, windowHeight/2 - 50);
+  text('More Info Coming Soon...', windowWidth/2, windowHeight/2 + 50);
 }
 
 // function mousePressed(){
