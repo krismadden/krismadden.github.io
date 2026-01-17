@@ -1,0 +1,59 @@
+:root {
+    --butter100: #F7F2EC;
+    --butter200: #F2E9DE;
+    --butter300: #CABDB1;
+    --butter500: #A99074;
+    --butter700: #625343;
+    --gray900: #9BA9D3;
+    --black: #000000;
+    --blue500: #4221d1;
+    --blue500: #2d21d1;
+
+    --border1: 12px;
+}
+
+body{
+    background-color: var(--butter200);
+    background-image:
+      linear-gradient(var(--butter300) 2px, transparent 2px),
+      linear-gradient(90deg, var(--butter300) 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-position: 20px 20px; /* offsets grid from top/left */
+    font-size: 16px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* header {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+} */
+
+.urlBar{
+    width: calc(100% - 4rem);
+    margin: 2rem;
+    background: var(--butter100);
+    border: 2px solid var(--butter700);
+    text-align:center;
+    border-radius: var(--border1);
+    box-shadow: 0 6px 16px var(--butter500);
+    position: relative;
+}
+
+.urlBar::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--butter500);
+    border: 2px solid var(--butter700);
+    z-index: -1;
+    border-radius: var(--border1);
+}
+  
+.urlBar .title{
+    text-transform: uppercase;
+    color: var(--blue500);
+}
